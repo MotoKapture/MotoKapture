@@ -12,7 +12,6 @@ There's a specific kind of motorcycle photograph that most people have never see
 
 This is not a Photoshop composite. It's a single frame, taken on a manual exposure with rear curtain flash sync, during the eighteen-minute window after the sun drops below the horizon. This guide gives you everything you need to execute it.
 
----
 
 ## What Makes This Shot Work
 
