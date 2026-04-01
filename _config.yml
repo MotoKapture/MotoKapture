@@ -1,0 +1,45 @@
+title: MotoKapture
+description: Motorcycle Photography — Technique, Not Gear
+baseurl: ""
+url: "https://motokapture.com"
+
+author:
+  name: MotoKapture
+  email: hello@motokapture.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  technique:
+    output: true
+    permalink: /technique/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "technique"
+    values:
+      layout: "technique"
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="article-hero">
+  <div class="container">
+    <p class="article-hero__cat">{{ page.category }}</p>
+    <h1 class="article-hero__title">{{ page.title }}</h1>
+    <p class="article-hero__sub">{{ page.subtitle }}</p>
+    <div class="article-hero__meta">
+      {% if page.gear %}<span>Gear: {{ page.gear }}</span>{% endif %}
+      {% if page.difficulty %}<span>Level: {{ page.difficulty }}</span>{% endif %}
+      {% if page.shoot_time %}<span>{{ page.shoot_time }}</span>{% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container--narrow">
+    {{ content }}
+  </div>
+</div>
+
+<!-- Related Articles -->
+<div class="section" style="border-top: 0.5px solid var(--border);">
+  <div class="container">
+    <div class="section__head">
+      <span class="label">More Technique</span>
+      <a href="/technique/" class="section__see-all">All guides</a>
+    </div>
+    <div class="article-grid">
+      {% assign related = site.technique | where_exp: "item", "item.url != page.url" | limit: 3 %}
+      {% for item in related %}
+      <a href="{{ item.url | relative_url }}" class="article-card">
+        <p class="article-card__cat">{{ item.category }}</p>
+        <h3 class="article-card__title">{{ item.title }}</h3>
+        <p class="article-card__meta">{{ item.gear }}</p>
+        <span class="article-card__arrow">→</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

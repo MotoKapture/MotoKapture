@@ -1,0 +1,150 @@
+---
+layout: default
+title: ""
+---
+
+{% include ticker.html %}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <p class="hero__eyebrow">Motorcycle Photography — Craft Over Gear</p>
+    <h1 class="hero__title">WHERE<br>SPEED<br>MEETS <em>LIGHT</em></h1>
+    <p class="hero__sub">Written technique guides, Lightroom preset packs, and field notes for photographers who understand the machine.</p>
+    <div class="hero__actions">
+      <a href="{{ '/technique/' | relative_url }}" class="btn btn--primary">Browse Technique Guides</a>
+      <a href="{{ '/presets/' | relative_url }}" class="btn btn--ghost">Free Preset Download →</a>
+    </div>
+    <div class="hero__stats">
+      <div>
+        <span class="stat__number">12+</span>
+        <span class="stat__label">Technique Guides</span>
+      </div>
+      <div>
+        <span class="stat__number">3</span>
+        <span class="stat__label">Preset Packs</span>
+      </div>
+      <div>
+        <span class="stat__number">ESP</span>
+        <span class="stat__label">Workshops · Murcia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST TECHNIQUE -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="label">Latest Technique</span>
+      <a href="{{ '/technique/' | relative_url }}" class="section__see-all">All guides</a>
+    </div>
+    <div class="article-grid">
+      {% assign techniques = site.technique | limit: 3 %}
+      {% for item in techniques %}
+      <a href="{{ item.url | relative_url }}" class="article-card">
+        <p class="article-card__cat">{{ item.category }}</p>
+        <h3 class="article-card__title">{{ item.title }}</h3>
+        <p class="article-card__meta">{{ item.gear }}</p>
+        <span class="article-card__arrow">→</span>
+      </a>
+      {% endfor %}
+      {% if techniques.size == 0 %}
+      <a href="/technique/rear-curtain-streak-shot/" class="article-card">
+        <p class="article-card__cat">Technique / Flash</p>
+        <h3 class="article-card__title">The Rear-Curtain Streak Shot — Complete Field Guide</h3>
+        <p class="article-card__meta">Blue hour · AD200 + V860III · Canon R6 II</p>
+        <span class="article-card__arrow">→</span>
+      </a>
+      <a href="#" class="article-card">
+        <p class="article-card__cat">Technique / Light</p>
+        <h3 class="article-card__title">Why Blue Hour Is Your Best Friend for Motorcycle Photography</h3>
+        <p class="article-card__meta">Natural light · Timing · Mountain roads</p>
+        <span class="article-card__arrow">→</span>
+      </a>
+      <a href="#" class="article-card">
+        <p class="article-card__cat">Direction / Workflow</p>
+        <h3 class="article-card__title">How to Direct a Rider for the Camera</h3>
+        <p class="article-card__meta">Speed, line, communication · Real roads</p>
+        <span class="article-card__arrow">→</span>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED SHOOT BREAKDOWN -->
+<section class="shoot-breakdown">
+  <div class="container">
+    <span class="label">Featured Shoot Breakdown</span>
+    <div class="shoot-breakdown__inner" style="margin-top:32px;">
+      <div>
+        <h2 class="shoot-breakdown__title">STREAK SHOT —<br>MOUNTAIN ROAD</h2>
+        <p class="shoot-breakdown__body">Rear curtain sync at blue hour. The shutter holds open for 0.5s painting the motion streak, then both flashes fire simultaneously — freezing the machine sharp against its own blur trail. This is the complete technical breakdown, including setup diagram, flash positions, and live troubleshooting.</p>
+        <a href="{{ '/technique/rear-curtain-streak-shot/' | relative_url }}" class="btn btn--primary">Read the Full Breakdown</a>
+      </div>
+      <div>
+        <table class="settings-table">
+          <tr><td>Camera</td><td>Canon R6 II</td></tr>
+          <tr><td>Lens</td><td>28–70mm f/2.8 @ 40mm</td></tr>
+          <tr><td>Shutter</td><td>0.5s – 0.8s</td></tr>
+          <tr><td>Aperture</td><td>f/8 – f/11</td></tr>
+          <tr><td>ISO</td><td>100</td></tr>
+          <tr><td>Sync Mode</td><td>Rear Curtain</td></tr>
+          <tr><td>Flash A — Fill</td><td>V860III · 1/16 – 1/8</td></tr>
+          <tr><td>Flash B — Rim</td><td>AD200 · 1/4 – 1/2</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="container">
+    <span class="label">Presets &amp; Resources</span>
+    <div class="product-grid">
+      <div class="product-card">
+        <span class="product-card__pill">Free</span>
+        <p class="product-card__price">€0</p>
+        <h3 class="product-card__name">Starter Preset Pack</h3>
+        <p class="product-card__desc">3 presets to feel the MotoKapture look. Instant download, no email required.</p>
+        <a href="{{ '/presets/' | relative_url }}" class="product-card__btn">Download Free</a>
+      </div>
+      <div class="product-card product-card--featured">
+        <span class="product-card__pill product-card__pill--hot">Most Popular</span>
+        <p class="product-card__price">€19</p>
+        <h3 class="product-card__name">Motion &amp; Dusk — Vol. 1</h3>
+        <p class="product-card__desc">12 Lightroom presets built for motorcycle motion, blue hour, and real-road conditions. Developed from actual field shoots.</p>
+        <a href="https://gumroad.com/motokapture" target="_blank" rel="noopener" class="product-card__btn">Buy on Gumroad</a>
+      </div>
+      <div class="product-card">
+        <span class="product-card__pill">Coming Soon</span>
+        <p class="product-card__price">€15</p>
+        <h3 class="product-card__name">RAW Files + Edit Walkthrough</h3>
+        <p class="product-card__desc">Real RAW files from field shoots with a step-by-step Lightroom Classic breakdown.</p>
+        <a href="#newsletter" class="product-card__btn">Join Waitlist</a>
+      </div>
+      <div class="product-card">
+        <span class="product-card__pill">Spain · 2026</span>
+        <p class="product-card__price">€299</p>
+        <h3 class="product-card__name">1-Day Workshop</h3>
+        <p class="product-card__desc">Murcia / Almería coast roads. Small group. Hands-on technique in the field with real bikes on real roads.</p>
+        <a href="{{ '/workshops/' | relative_url }}" class="product-card__btn">Express Interest</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="newsletter">
+  <div class="container">
+    <h2 class="newsletter__title">TECHNIQUE.<br><span>NOT GEAR.</span></h2>
+    <p class="newsletter__sub">New guides, preset drops, and field notes — direct to your inbox.</p>
+    <form class="newsletter__form" action="https://YOUR_MAILCHIMP_URL" method="POST" target="_blank">
+      <input type="email" name="EMAIL" placeholder="your@email.com" class="newsletter__input" required>
+      <button type="submit" class="newsletter__submit">Subscribe</button>
+    </form>
+    <p style="font-size:12px;color:var(--white-dim);margin-top:16px;">No spam. Unsubscribe any time.</p>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<nav class="nav">
+  <a href="{{ '/' | relative_url }}" class="nav__logo">MOTO<span>K</span>APTURE</a>
+
+  <ul class="nav__links">
+    <li><a href="{{ '/technique/' | relative_url }}">Technique</a></li>
+    <li><a href="{{ '/field-notes/' | relative_url }}">Field Notes</a></li>
+    <li><a href="{{ '/presets/' | relative_url }}">Presets</a></li>
+    <li><a href="{{ '/workshops/' | relative_url }}">Workshops</a></li>
+  </ul>
+
+  <a href="{{ '/presets/' | relative_url }}" class="nav__cta btn">Get Presets</a>
+  <button class="nav__mobile-toggle" id="mobile-toggle" aria-label="Menu">☰</button>
+</nav>
+
+<div class="nav__mobile-menu" id="mobile-menu" style="display:none; background:var(--black); border-bottom:0.5px solid var(--border); padding:20px 32px;">
+  <ul style="display:flex;flex-direction:column;gap:20px;">
+    <li><a href="{{ '/technique/' | relative_url }}" style="font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--white-muted);">Technique</a></li>
+    <li><a href="{{ '/field-notes/' | relative_url }}" style="font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--white-muted);">Field Notes</a></li>
+    <li><a href="{{ '/presets/' | relative_url }}" style="font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--white-muted);">Presets</a></li>
+    <li><a href="{{ '/workshops/' | relative_url }}" style="font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--white-muted);">Workshops</a></li>
+    <li><a href="{{ '/presets/' | relative_url }}" style="font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);">Get Presets →</a></li>
+  </ul>
+</div>

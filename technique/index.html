@@ -1,0 +1,29 @@
+---
+layout: default
+title: Technique
+---
+
+{% include ticker.html %}
+
+<section class="article-hero">
+  <div class="container">
+    <p class="article-hero__cat">Resource</p>
+    <h1 class="article-hero__title">TECHNIQUE<br>GUIDES</h1>
+    <p class="article-hero__sub">Written guides on the craft of motorcycle photography. Setup diagrams, annotated RAW edits, and field-tested settings. No gear reviews.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="article-grid">
+      {% for item in site.technique %}
+      <a href="{{ item.url | relative_url }}" class="article-card">
+        <p class="article-card__cat">{{ item.category }}</p>
+        <h3 class="article-card__title">{{ item.title }}</h3>
+        <p class="article-card__meta">{{ item.gear }}</p>
+        <span class="article-card__arrow">→</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
