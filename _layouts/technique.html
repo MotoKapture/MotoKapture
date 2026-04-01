@@ -1,28 +1,27 @@
+---
+layout: default
+---
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "{{ page.title }}",
-  "description": "{{ page.subtitle }}",
+  "@type": "TechArticle",
+  "name": "{{ page.title | escape }}",
+  "description": "{{ page.subtitle | escape }}",
   "url": "{{ page.url | absolute_url }}",
+  "image": "https://motokapture.com/assets/images/streak-setup-diagram.webp",
   "author": {
-    "@type": "Person",
-    "name": "MotoKapture"
+    "@type": "Organization",
+    "name": "MotoKapture",
+    "url": "https://motokapture.com"
   },
   "publisher": {
     "@type": "Organization",
     "name": "MotoKapture",
     "url": "https://motokapture.com"
-  },
-  "image": "https://motokapture.com/assets/images/streak-setup-diagram.webp"
+  }
 }
 </script>
-
-<div class="article-hero">
-...
----
-layout: default
----
 
 <div class="article-hero">
   <div class="container">
@@ -51,7 +50,7 @@ layout: default
       <a href="/technique/" class="section__see-all">All guides</a>
     </div>
     <div class="article-grid">
-      {% assign related = site.technique | where_exp: "item", "item.url != page.url" | limit: 3 %}
+      {% assign related = site.technique | where_exp: "item", "item.url != page.url" | slice: 0, 3 %}
       {% for item in related %}
       <a href="{{ item.url | relative_url }}" class="article-card">
         <p class="article-card__cat">{{ item.category }}</p>
