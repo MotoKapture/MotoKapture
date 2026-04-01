@@ -43,7 +43,7 @@ You don't need different gear. The AD200 at farside gives you the rim/halo light
 ## The Setup Diagram
 
 <figure class="diagram-embed">
-  <img src="{{ '/assets/images/streak-setup-diagram.png' | relative_url }}" alt="Rear curtain streak shot setup diagram showing camera position, Flash A nearside, Flash B farside, bike movement direction, and freeze point">
+  <img src="{{ '/assets/images/streak-setup-diagram.webp' | relative_url }}" alt="Rear curtain streak shot setup diagram showing camera position, Flash A nearside, Flash B farside, bike movement direction, and freeze point">
   <figcaption>Setup overhead view — flash positions, bike travel direction, and the freeze point in the centre of frame</figcaption>
 </figure>
 
