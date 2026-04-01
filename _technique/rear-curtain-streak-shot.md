@@ -28,11 +28,12 @@ Combine this with a blue hour sky (deeply underexposed ambient, rich colour in t
 
 <div class="settings-block">
   <table class="settings-table">
-    <tr><td>Camera</td><td>Canon R6 II on heavy-duty tripod (must be rock-steady)</td></tr>
-    <tr><td>Lens</td><td>28–70mm f/2.8 — set to approx. 35–40mm</td></tr>
-    <tr><td>Trigger</td><td>Godox X3 Pro — Rear Curtain Sync active in Sync Menu</td></tr>
-    <tr><td>Flash A — Fill</td><td>V860III, nearside, ~1m height</td></tr>
-    <tr><td>Flash B — Rim</td><td>AD200, farside, 2m+ height</td></tr>
+    <tr><td>Camera</td><td>Any mirrorless or DSLR with manual mode</td></tr>
+    <tr><td>Lens</td><td>Standard zoom 24–70mm equivalent — set to 35–40mm</td></tr>
+    <tr><td>Trigger</td><td>Any wireless flash trigger with rear curtain sync support</td></tr>
+    <tr><td>Flash A — Fill</td><td>Any speedlight, nearside, ~1m height</td></tr>
+    <tr><td>Flash B — Rim</td><td>Any monolight or powerful speedlight, farside, 2m+ height</td></tr>
+    <tr><td>Tripod</td><td>Heavy duty — must be rock-steady for the full exposure</td></tr>
   </table>
 </div>
 
