@@ -5,6 +5,7 @@ date: 2026-04-02
 location: Sardinia
 bike: BMW R1150GS
 category: Field Notes
+image: /assets/images/moto-11.webp
 excerpt: "After 12 days on the road and almost 700km in the rain, I thought the hardest part was behind me. Then at 3am something brushed against my head inside the tent."
 ---
 
