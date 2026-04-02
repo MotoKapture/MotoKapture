@@ -3,7 +3,6 @@
    Design: Dark editorial, amber accent
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
 /* ---- Reset & Base ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
