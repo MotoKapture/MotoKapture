@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div class="article-hero">
+  <div class="container">
+    <p class="article-hero__cat">Field Notes · {{ page.location }}</p>
+    <h1 class="article-hero__title">{{ page.title }}</h1>
+    <p class="article-hero__sub">{{ page.excerpt }}</p>
+    <div class="article-hero__meta">
+      {% if page.bike %}<span>{{ page.bike }}</span>{% endif %}
+      {% if page.location %}<span>{{ page.location }}</span>{% endif %}
+      <span>{{ page.date | date: "%B %Y" }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container--narrow">
+
+    {% if page.image %}
+    <figure class="diagram-embed" style="margin-bottom:2rem;">
+      <img src="{{ page.image }}" alt="{{ page.title }}">
+    </figure>
+    {% endif %}
+
+    {{ content }}
+
+  </div>
+</div>
+
+<div class="section" style="border-top: 0.5px solid var(--border);">
+  <div class="container">
+    <div class="section__head">
+      <span class="label">More Field Notes</span>
+      <a href="/field-notes/" class="section__see-all">All notes</a>
+    </div>
+    <div class="article-grid">
+      {% assign others = site.posts | where_exp: "post", "post.url != page.url" | limit: 3 %}
+      {% for post in others %}
+      <a href="{{ post.url | relative_url }}" class="article-card">
+        <p class="article-card__cat">{{ post.location | default: "Field Note" }}</p>
+        <h3 class="article-card__title">{{ post.title }}</h3>
+        <p class="article-card__meta">{{ post.date | date: "%B %Y" }} · {{ post.bike }}</p>
+        <span class="article-card__arrow">→</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
