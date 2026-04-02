@@ -1,0 +1,49 @@
+---
+layout: default
+title: Field Notes
+---
+
+{% include ticker.html %}
+
+<section class="article-hero">
+  <div class="container">
+    <p class="article-hero__cat">Field Notes</p>
+    <h1 class="article-hero__title">FIELD<br>NOTES</h1>
+    <p class="article-hero__sub">Shoot reports from real roads. Where the light was, what failed, what worked, and the one frame that made it worth it.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="article-grid">
+      {% for post in site.posts %}
+      <a href="{{ post.url | relative_url }}" class="article-card">
+        <p class="article-card__cat">{{ post.location | default: "Field Note" }}</p>
+        <h3 class="article-card__title">{{ post.title }}</h3>
+        <p class="article-card__meta">{{ post.date | date: "%B %Y" }} · {{ post.bike | default: "" }}</p>
+        <span class="article-card__arrow">→</span>
+      </a>
+      {% endfor %}
+      {% if site.posts.size == 0 %}
+      <div class="article-card" style="cursor:default;">
+        <p class="article-card__cat">Coming Soon</p>
+        <h3 class="article-card__title">First field note dropping soon.</h3>
+        <p class="article-card__meta">Subscribe below to get it in your inbox.</p>
+        <span class="article-card__arrow">→</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="newsletter" id="newsletter">
+  <div class="container">
+    <h2 class="newsletter__title">NOTES FROM<br><span>THE ROAD.</span></h2>
+    <p class="newsletter__sub">New field notes direct to your inbox — before they hit the site.</p>
+    <form class="newsletter__form" action="https://motokapture.us7.list-manage.com/subscribe/post?u=cedffbea77b206fe6039f7e1a&id=02ab525199&f_id=009de6e4f0" method="POST" target="_blank">
+      <input type="email" name="EMAIL" placeholder="your@email.com" class="newsletter__input" required>
+      <button type="submit" class="newsletter__submit">Subscribe</button>
+    </form>
+    <p style="font-size:12px;color:var(--white-dim);margin-top:16px;">No spam. Unsubscribe any time.</p>
+  </div>
+</section>
