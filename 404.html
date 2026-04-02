@@ -1,0 +1,30 @@
+---
+layout: default
+title: Page Not Found
+permalink: /404.html
+---
+
+<section class="article-hero" style="min-height:60vh;display:flex;align-items:center;">
+  <div class="container">
+    <p class="article-hero__cat">404 — Not Found</p>
+    <h1 class="article-hero__title" style="color:var(--amber);">WRONG<br>ROAD.</h1>
+    <p class="article-hero__sub">This page doesn't exist — or it moved. You'll be redirected to the homepage in <span id="countdown">5</span> seconds.</p>
+    <div class="hero__actions" style="margin-top:32px;">
+      <a href="/" class="btn btn--primary">Back to Home</a>
+      <a href="/technique/" class="btn btn--ghost">Browse Technique →</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  let seconds = 5;
+  const countdown = document.getElementById('countdown');
+  const timer = setInterval(() => {
+    seconds--;
+    if (countdown) countdown.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(timer);
+      window.location.href = '/';
+    }
+  }, 1000);
+</script>
